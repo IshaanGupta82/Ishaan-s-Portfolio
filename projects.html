@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Add this line -->
+    <title>Projects | Ishaan's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100px;
+            background-color: rgb(18, 18, 62);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(153, 153, 226);
+            font-size: 1.04rem;
+        }
+
+        main hr {
+            border: 0;
+            background: #9c97f1;
+            height: 1.2px;
+            margin: 40px 84px;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstsection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 5px 0;
+        }
+
+        .firstsection>div {
+            width: 30%;
+        }
+
+        .leftsection {
+            font-size: 2rem;
+            margin-left: 30%;
+            margin: 30px;
+        }
+
+        .leftsection .buttons {
+            padding: 50px 0;
+        }
+
+        .leftsection .btn {
+            padding: 12px;
+            background: #1e2167;
+            color: white;
+            border: 2px solid white;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .rightsection img {
+            width: 80%;
+
+        }
+
+        .purple {
+            color: rgb(170, 107, 228);
+            font-weight: bold;
+
+        }
+
+        .text-gray {
+            color: gray
+        }
+
+        #element {
+            color: rgb(170, 107, 228);
+        }
+
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+
+        .secondSection h1 {
+            font-size: 2rem;
+
+        }
+
+        .secondSection .box {
+            background: white;
+            width: 88vw;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+        }
+
+        .secondSection .vertical {
+
+            height: 93px;
+            width: 1px;
+            background-color: white;
+            margin: 0 120px;
+
+        }
+
+        .image-top {
+            width: 30px;
+            position: relative;
+            top: -32px;
+            left: -9px;
+
+        }
+
+        .vertical-title {
+            position: relative;
+            top: 75px;
+            width: 150px;
+
+        }
+
+        .vertical-desc {
+            position: relative;
+            top: 86px;
+            width: 150px;
+            font-size: 9px;
+            color: gray;
+        }
+
+        footer {
+            background-color: #0e0e1a;
+            height: max-content;
+
+        }
+
+        .footer {
+            display: flex;
+            padding: 23px 122px;
+            justify-content: space-evenly;
+        }
+
+        .footer-image {
+            width: 80px;
+        }
+
+        .social-images {
+            width: 50px;
+            margin: 0 10px;
+        }
+
+        .footer>div {
+            min-width: 150px;
+            max-width: 95vw;
+            width: 100%;
+            text-align: center;
+        }
+
+        footer .footer-rights {
+            text-align: center;
+            color: gray;
+            padding: 12px 0;
+        }
+
+        .project-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .project-item {
+            background: rgb(18, 18, 62);
+            border-radius: 10px;
+            padding: 20px;
+            width: 350px;
+            max-width: 90vw;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 900px) {
+            nav {
+                flex-direction: column;
+                height: auto;
+                padding: 10px 0;
+            }
+
+            .footer {
+                flex-direction: column;
+                align-items: center;
+                padding: 23px 2vw;
+            }
+
+            .footer>div {
+                min-width: 100px;
+                max-width: 98vw;
+                font-size: 0.95rem;
+            }
+
+            .project-list {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .project-item {
+                width: 95vw;
+                padding: 12px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            nav ul li {
+                margin: 0 8px;
+            }
+
+            .footer-image,
+            .social-images {
+                width: 32px;
+            }
+
+            .footer-rights {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Ishaan's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="projects-section">
+            <h1>My Projects</h1>
+            <div class="project-list">
+                <!-- Add your projects here -->
+                <div class="project-item">
+                    <h2>AI-Chatbot</h2>
+                    <p>An interactive web-based chatbot built using Google’s Gemini Pro API, capable of handling natural
+                        conversations in real time. Designed with React.js and styled using Tailwind CSS, the chatbot
+                        offers a smooth, responsive UI and is deployed seamlessly via Vercel. It showcases my interest
+                        in conversational AI and hands-on skills in API integration, frontend development, and real-time
+                        data handling.</p>
+                    <a href="https://ai-chatbot-phi-puce.vercel.app/">View Project</a>
+
+
+                </div>
+                <div class="project-item">
+                    <h2> Power and RF Subsystem– Student CubeSat Project (SIGINT-A)</h2>
+                    <p>Designed power distribution and RF communication systems for a SIGINT-focused CubeSat (30–300
+                        MHz). Simulated performance using MATLAB and LTSpice.Collaborated with aerospace and physics
+                        students for system-level integration</p>
+
+
+                </div>
+                <div class="project-item">
+                    <h2> Nairobi Transport Demand Prediction</h2>
+                    <p>Developed a regression model to predict the number of bus seats sold per ride using historical
+                        ticketing data, travel time, route origins, and vehicle details. The project supports
+                        data-driven transport planning in Nairobi.
+
+                    </p>
+                </div>
+        </section>
+    </main>
+    <!-- Copy your footer here -->
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <p> <a href="https://www.iist.ac.in/"><img src="images/Remove background project.png" alt=""
+                            class="footer-image"></a></p>
+                <p>Indian Institute of Space Science and Technology</p>
+                <p>Thiruvananthapuram, Kerala</p>
+
+            </div>
+            <div class="footer-second">
+                <h4>Contact Me</h4>
+                <p>Email: ishaangupta126@gmail.com</p>
+            </div>
+            <div class="footer-third">
+
+                <p><a href="https://www.linkedin.com/in/ishaan-gupta-9a033a29b/"><img src="images/174857.png"
+                            class="social-images"></a></p>
+
+            </div>
+            <div class="footer-fourth">
+                <p> <a href="https://github.com/IshaanGupta82"><img src="images/Github-Logo.png"
+                            class="social-images"></a></p>
+            </div>
+
+            <div class="footer-fifth">
+                <p><a href="https://www.instagram.com/ishaangupta311/"><img src="images/733558.png"
+                            class="social-images"></a></p>
+            </div>
+        </div>
+        <div class="footer-rights">
+            www.ishaansportfolio.com | All rights reserved © 2025
+        </div>
+    </footer>
+</body>
+
+</html>

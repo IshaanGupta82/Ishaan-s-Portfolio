@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Me | Ishaan's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100px;
+            background-color: rgb(18, 18, 62);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(153, 153, 226);
+            font-size: 1.04rem;
+        }
+
+        main hr {
+            border: 0;
+            background: #9c97f1;
+            height: 1.2px;
+            margin: 40px 84px;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstsection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 5px 0;
+        }
+
+        .firstsection>div {
+            width: 30%;
+        }
+
+        .leftsection {
+            font-size: 2rem;
+            margin-left: 30%;
+            margin: 30px;
+        }
+
+        .leftsection .buttons {
+            padding: 50px 0;
+        }
+
+        .leftsection .btn {
+            padding: 12px;
+            background: #1e2167;
+            color: white;
+            border: 2px solid white;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .rightsection img {
+            width: 80%;
+
+        }
+
+        .purple {
+            color: rgb(170, 107, 228);
+            font-weight: bold;
+
+        }
+
+        .text-gray {
+            color: gray
+        }
+
+        #element {
+            color: rgb(170, 107, 228);
+        }
+
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+
+        .secondSection h1 {
+            font-size: 2rem;
+
+        }
+
+        .secondSection .box {
+            background: white;
+            width: 88vw;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+        }
+
+        .secondSection .vertical {
+
+            height: 93px;
+            width: 1px;
+            background-color: white;
+            margin: 0 120px;
+
+        }
+
+        .image-top {
+            width: 30px;
+            position: relative;
+            top: -32px;
+            left: -9px;
+
+        }
+
+        .vertical-title {
+            position: relative;
+            top: 75px;
+            width: 150px;
+
+        }
+
+        .vertical-desc {
+            position: relative;
+            top: 86px;
+            width: 150px;
+            font-size: 9px;
+            color: gray;
+        }
+
+        footer {
+            background-color: #0e0e1a;
+
+        }
+
+        .footer {
+            display: flex;
+            padding: 23px 122px;
+            justify-content: space-evenly;
+        }
+
+        .footer-image {
+            width: 80px;
+        }
+
+        .social-images {
+            width: 50px;
+            margin: 0 10px;
+        }
+
+        .footer>div {
+            width: 323px;
+        }
+
+        footer .footer-rights {
+            text-align: center;
+            color: gray;
+            padding: 12px 0;
+        }
+        .contact-container {
+            max-width: 500px;
+            margin: 60px auto;
+            background: rgb(18, 18, 62);
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        label,
+        input,
+        textarea {
+            display: block;
+            width: 100%;
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+
+        input,
+        textarea {
+            padding: 8px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .btn {
+            background: #1e2167;
+            color: white;
+            border: 2px solid white;
+            border-radius: 6px;
+            padding: 12px;
+            cursor: pointer;
+            width: auto;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 900px) {
+            nav {
+                flex-direction: column;
+                height: auto;
+                padding: 10px 0;
+            }
+            .footer {
+                flex-direction: column;
+                align-items: center;
+                padding: 23px 2vw;
+            }
+            .footer>div {
+                width: 90vw;
+                margin-bottom: 15px;
+                text-align: center;
+            }
+            .footer-image, .social-images {
+                width: 60px;
+            }
+            .contact-container {
+                margin: 30px 2vw;
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            nav ul li {
+                margin: 0 8px;
+            }
+            .footer {
+                padding: 23px 1vw;
+            }
+            .footer-image, .social-images {
+                width: 40px;
+            }
+            .footer>div {
+                width: 98vw;
+                font-size: 0.9rem;
+            }
+            .footer-rights {
+                font-size: 0.8rem;
+            }
+            .contact-container {
+                max-width: 98vw;
+                padding: 10px;
+            }
+            label,
+            input,
+            textarea {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Ishaan's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="contact-container">
+            <h2>Contact Me</h2>
+            <form action="https://formspree.io/f/xvgqaeae" method="POST">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Your Query</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit" class="btn">Send</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <p> <a href="https://www.iist.ac.in/"><img src="images/Remove background project.png" alt=""
+                            class="footer-image"></a></p>
+                <p>Indian Institute of Space Science and Technology</p>
+                <p>Thiruvananthapuram, Kerala</p>
+
+            </div>
+            <div class="footer-second">
+                <h4>Contact Me</h4>
+                <p>Email: ishaangupta126@gmail.com</p>
+            </div>
+            <div class="footer-third">
+
+                <p><a href="https://www.linkedin.com/in/ishaan-gupta-9a033a29b/"><img src="images/174857.png"
+                            class="social-images"></a></p>
+
+            </div>
+            <div class="footer-fourth">
+                <p> <a href="https://github.com/IshaanGupta82"><img src="images/Github-Logo.png"
+                            class="social-images"></a></p>
+            </div>
+
+            <div class="footer-fifth">
+                <p><a href="https://www.instagram.com/ishaangupta311/"><img src="images/733558.png"
+                            class="social-images"></a></p>
+            </div>
+        </div>
+        <div class="footer-rights">
+            www.ishaansportfolio.com | All rights reserved © 2025
+        </div>
+    </footer>
+</body>
+
+</html>
