@@ -113,6 +113,9 @@
             max-width: 80vw;
             margin: auto;
             height: 80vh;
+            background: rgb(18, 18, 62);
+            border-radius: 16px;
+            padding: 32px 0;
         }
 
         .secondSection h1 {
@@ -121,43 +124,75 @@
         }
 
         .secondSection .box {
-            background: white;
+            background: transparent;
             width: 88vw;
             height: 2px;
             margin: 56px 0;
             display: flex;
+            /* Desktop: horizontal layout */
         }
 
         .secondSection .vertical {
+            width: 260px;
+            max-width: 90vw;
+            min-height: 320px;
+            background: linear-gradient(135deg, #23235b 60%, #1e2167 100%);
+            margin: 0 24px;
+            position: relative;
+            border-radius: 18px;
+            box-shadow: 0 6px 32px 0 rgba(31, 38, 135, 0.13);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 28px 14px 18px 14px;
+            transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+            border: 1.5px solid #9c97f1;
+            gap: 0;
+            box-sizing: border-box;
+        }
 
-            height: 93px;
-            width: 1px;
-            background-color: white;
-            margin: 0 120px;
-
+        .secondSection .vertical:hover {
+            box-shadow: 0 12px 36px 0 rgba(170, 107, 228, 0.18);
+            transform: translateY(-8px) scale(1.04);
+            border-color: #a76cf1;
+            z-index: 2;
         }
 
         .image-top {
-            width: 30px;
-            position: relative;
-            top: -32px;
-            left: -9px;
-
+            width: 56px;
+            height: 56px;
+            object-fit: contain;
+            margin: 0 0 18px 0;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(31, 38, 135, 0.07);
         }
 
         .vertical-title {
-            position: relative;
-            top: 75px;
-            width: 150px;
-
+            width: 100%;
+            font-weight: bold;
+            margin-bottom: 6px;
+            text-align: center;
+            color: #a76cf1;
+            font-size: 0.82rem;
+            letter-spacing: 0.06px;
+            padding: 0 10px;
+            word-break: break-word;
+            line-height: 1.25;
+            box-sizing: border-box;
         }
 
         .vertical-desc {
-            position: relative;
-            top: 86px;
-            width: 150px;
-            font-size: 9px;
-            color: gray;
+            width: 100%;
+            font-size: 0.74rem;
+            color: #bdbdfc;
+            text-align: center;
+            margin: 0;
+            margin-top: 4px;
+            line-height: 1.35;
+            padding: 0 10px 0 10px;
+            word-break: break-word;
+            box-sizing: border-box;
         }
 
         footer {
@@ -192,6 +227,12 @@
 
         /* Responsive Styles */
         @media (max-width: 900px) {
+            nav {
+                flex-direction: column;
+                height: auto;
+                padding: 10px 0;
+            }
+
             .footer {
                 flex-direction: column;
                 align-items: center;
@@ -203,36 +244,97 @@
                 margin-bottom: 15px;
                 text-align: center;
             }
-
-            .footer-image,
-            .social-images {
-                width: 60px;
-            }
         }
 
         @media (max-width: 600px) {
-            nav {
+            nav ul {
                 flex-direction: column;
-                height: auto;
-                padding: 10px 0;
+                align-items: center;
             }
 
             nav ul li {
-                margin: 0 8px;
+                margin: 8px 0;
+            }
+
+            .firstsection {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .firstsection>div,
+            .leftsection {
+                width: 90vw !important;
+                margin: 20px auto !important;
+            }
+
+            .secondSection {
+                max-width: 98vw;
+                height: auto;
+                background: rgb(0, 0, 33);
+                border-radius: 12px;
+                padding: 16px 0;
+            }
+
+            .secondSection .box {
+                flex-direction: column;
+                align-items: center;
+                width: 98vw;
+                margin: 16px 0;
+                height: auto;
+                background: transparent;
+            }
+
+            .secondSection .vertical {
+                margin: 16px 0 !important;
+                width: 90vw !important;
+                min-width: 0;
+                max-width: 100vw;
+                background: #fff;
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                position: static;
+                height: auto;
+                border-radius: 12px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+                padding: 16px 8px;
+                gap: 16px;
+            }
+
+            .image-top {
+                position: static;
+                width: 36px;
+                height: 36px;
+                margin-right: 12px;
+                margin-bottom: 0;
+                flex-shrink: 0;
+                top: unset;
+                left: unset;
+            }
+
+            .vertical-title,
+            .vertical-desc {
+                width: auto !important;
+                text-align: left;
+                position: static;
+                font-size: 0.98rem;
+                margin: 0;
+                top: unset;
+            }
+
+            .vertical-title {
+                font-weight: bold;
+                margin-bottom: 4px;
             }
 
             .footer {
-                padding: 23px 1vw;
-            }
-
-            .footer-image,
-            .social-images {
-                width: 40px;
+                padding: 16px 2vw;
             }
 
             .footer>div {
                 width: 98vw;
-                font-size: 0.9rem;
+                font-size: 0.95rem;
+                margin-bottom: 10px;
             }
 
             .footer-rights {
@@ -276,7 +378,7 @@
 
             </div>
             <div class="rightsection"></div>
-            <img src="bg5.png" alt="" class="">
+            <img src="./images/bg5.png" alt="" class="">
 
         </section>
 
@@ -286,7 +388,7 @@
             <h1>Previous Achievements</h1>
             <div class="box">
                 <div class="vertical">
-                    <img src="log.webp" alt="" class="image-top">
+                    <img src="./images/log.webp" alt="" class="image-top">
                     <div class="vertical-title">
                         CBSE Secondary Examination School Topper (2022)
                     </div>
@@ -296,19 +398,18 @@
                     </div>
                 </div>
                 <div class="vertical">
-                    <img src="IAPT.webp" alt="" class="image-top">
+                    <img src="./images/IAPT.webp" alt="" class="image-top">
                     <div class="vertical-title">
                         Qualified IOQP and NSEA conducted by IAPT(2023)
                     </div>
                     <div class="vertical-desc">
-                        Successfully qualified the Indian Olympiad Qualifier in Physics (IOQP) and the National Standard
-                        Examination in Astronomy (NSEA), both prestigious national-level exams conducted by the Indian
-                        Association of Physics Teachers (IAPT), showcasing strong conceptual understanding and
-                        problem-solving skills in physics and astronomy.
+                        Qualified the Indian Olympiad Qualifier in Physics (IOQP) and the National Standard
+                        Examination in Astronomy (NSEA),both conducted by the Indian
+                        Association of Physics Teachers (IAPT).
                     </div>
                 </div>
                 <div class="vertical">
-                    <img src="mta-logo-sm.png" alt="" class="image-top">
+                    <img src="./images/mta-logo-sm.png" alt="" class="image-top">
                     <div class="vertical-title">
                         Qualified IOQM (2023) conducted by MTA
                     </div>
@@ -319,7 +420,7 @@
                     </div>
                 </div>
                 <div class="vertical">
-                    <img src="log.webp" alt="" class="image-top">
+                    <img src="./images/log.webp" alt="" class="image-top">
                     <div class="vertical-title">
                         CBSE Higher Secondary Examination School Topper (2024)
                     </div>
@@ -330,7 +431,7 @@
                     </div>
                 </div>
                 <div class="vertical">
-                    <img src="jee.webp" alt="" class="image-top">
+                    <img src="./images/jee.webp" alt="" class="image-top">
                     <div class="vertical-title">
                         Qualified JEE Mains (2024) and JEE Advanced (2024)
                     </div>
@@ -350,7 +451,7 @@
     <footer>
         <div class="footer">
             <div class="footer-first">
-                <p> <a href="https://www.iist.ac.in/"><img src="Remove background project.png" alt=""
+                <p> <a href="https://www.iist.ac.in/"><img src="./images/Remove background project.png" alt=""
                             class="footer-image"></a></p>
                 <p>Indian Institute of Space Science and Technology</p>
                 <p>Thiruvananthapuram, Kerala</p>
@@ -362,17 +463,17 @@
             </div>
             <div class="footer-third">
 
-                <p><a href="https://www.linkedin.com/in/ishaan-gupta-9a033a29b/"><img src="174857.png"
+                <p><a href="https://www.linkedin.com/in/ishaan-gupta-9a033a29b/"><img src="./images/174857.png"
                             class="social-images"></a></p>
 
             </div>
             <div class="footer-fourth">
-                <p> <a href="https://github.com/IshaanGupta82"><img src="Github-Logo.png"
+                <p> <a href="https://github.com/IshaanGupta82"><img src="./images/Github-Logo.png"
                             class="social-images"></a></p>
             </div>
 
             <div class="footer-fifth">
-                <p><a href="https://www.instagram.com/ishaangupta311/"><img src="733558.png"
+                <p><a href="https://www.instagram.com/ishaangupta311/"><img src="./images/733558.png"
                             class="social-images"></a></p>
             </div>
         </div>
